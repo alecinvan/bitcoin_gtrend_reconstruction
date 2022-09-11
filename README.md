@@ -1,4 +1,4 @@
-## bitcoin_gtrend_reconstruction
+## <h1 align="center">Reconstruction of Hourly Google trend data of query "bitcoin"</h1> 
 
 
 
