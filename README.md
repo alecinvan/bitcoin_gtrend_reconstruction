@@ -10,7 +10,7 @@ Clearly this problem is to reconstruct the hourly data to make it comparable bas
 Because the hourly data only allows intra-week comparisons, we need to make the valid comparisons globally, the hourly data 
 for each week needs to rescaled by the respective weekly search interest weights for all the weeks between 2017 and present. 
 Since weekly data is retrieved by yearly resolution, it has the same issue as hourly data, so we need to firstly rescale weekly data 
-based on corresponding monthly trend data which is retrieved directly from 2017 to now. After that, using this comparable weekly dataset to renormalize the hourly data. So 
+based on corresponding monthly trend data which is retrieved directly from 2017 to now. After that, using this comparable weekly dataset to renormalize the hourly data.  The process is like: 
 
 
 1. Renormalize the weekly data concatenated from multiple yearly queries by correponding monthly trend data.
