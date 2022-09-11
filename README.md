@@ -14,10 +14,11 @@ based on corresponding monthly trend data which is retrieved directly from 2017 
 
 
 1. Renormalize the weekly data concatenated from multiple yearly queries by correponding monthly trend data.
-2. Renormalize the hourly data concatenated from multiple weekly queries by resulted weekly trend data from 1)
+2. Renormalize the hourly data concatenated from multiple weekly queries by resulted weekly trend data from 1.) .
 
 
 So this is the fundamental principle to solve this problem, please see [code](https://github.com/alecinvan/bitcoin_gtrend_reconstruction/blob/main/reconstructionHourlydata.py) for detail.
+
 
 
 
