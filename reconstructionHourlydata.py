@@ -23,6 +23,18 @@ df_hourly = df_hourly.drop(columns=['time_hour'])
 
 
 def merge_rescale_data(df1, df2, df1_col, df2_col, scale, newcol)->pd.DataFrame:
+    """ This is the main body to merge and scale the concatenated trend data.
+    
+        Arguments:
+        
+        df1: the dataframe to be scaled
+        df2: the dataframe of valid broader time resolution trend data
+        df1_col: the search interest trend data of df1
+        df2_col: the search interest trend data of df2
+        scale: the column of scale measure 
+        newcol: generate new column of renormalized df1_col
+       
+    """
     # Merge monthly/weekly data to weekly/hourly data 
     assemble_df = df1.join(df2)
     # Replace NaNs with values
@@ -36,6 +48,7 @@ def merge_rescale_data(df1, df2, df1_col, df2_col, scale, newcol)->pd.DataFrame:
   
 # rescale the weekly data and generate the weekly consistent data
 assemble_weekly = pd.DataFrame(merge_rescale_data(df_weekly, df_monthly, 'value_week', 'value_month', 'scale_measure', 'renormalized_weekly'))
+#print(assemble_weekly.head(50))
 
 # Generate valid comparable weekly data to scale global hourly data 
 weekly_scale = pd.DataFrame(assemble_weekly, columns= ["renormalized_weekly"])
@@ -44,6 +57,8 @@ weekly_scale.index = pd.to_datetime(weekly_scale.index).strftime('%Y-%m-%d %H:%M
 
 # rescale the hourly data and generate the hourly consistent data
 assemble_hourly = pd.DataFrame(merge_rescale_data(df_hourly, weekly_scale, 'value_hour', 'renormalized_weekly', 'scale_measure', 'renormalized_hour'))
+#print(assemble_hourly.head(50))
+
 # Generate comparable hourly data from 2017 to now 
 hourly_comparable = pd.DataFrame(assemble_hourly, columns= ["renormalized_hour"])
 
