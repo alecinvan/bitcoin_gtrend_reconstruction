@@ -2,8 +2,8 @@
 
 
 
-Currently Google has the limitation for the time resolution to query the trend data, query for only 7-day period provides hourly search trends, 
-weekly data is provided for query 1 year. However we are able to have the monthly data return for any longer period query.
+Currently Google has the limitation for the time resolution to query the trend data, query for only 7-day period provides hourly 
+search trends, weekly data is provided for query 1 year. However we are able to have the monthly data return for any longer period query.
 
 Clearly this problem is to reconstruct the hourly data to make it comparable based on the 3 downloaded dataset provided. 
 Because the hourly data only allows intra-week comparisons, we need to make the valid comparisons globally, the hourly data 
@@ -15,5 +15,6 @@ So this is the fundamental principle to solve this problem, please see [code](ht
 
 
 
-Alec 
+Alec Li
+
 Sept 11, 2022
