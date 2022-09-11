@@ -11,7 +11,7 @@ for each week needs to rescaled by the respective weekly search interest weights
 Since weekly data is retrieved by yearly resolution, it has the same issue as hourly data, so we need to rescale weekly data 
 based on corresponding monthly trend data which is retrieved directly from 2017 to now.
 
-So this is the fundamental principle to solve this problem, please see code for detail.
+So this is the fundamental principle to solve this problem, please see [code](https://github.com/alecinvan/bitcoin_gtrend_reconstruction/blob/main/reconstructionHourlydata.py) for detail.
 
 
 
