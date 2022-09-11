@@ -1,6 +1,6 @@
-# bitcoin_gtrend_reconstruction
+## bitcoin_gtrend_reconstruction
 
-## Reconstruction of hourly Google trend data of query "bitcoin"##
+
 
 Currently Google has the limitation for the time resolution to query the trend data, query for only 7-day period provides hourly search trends, weekly data is provided for query 1 year. However we are able to have the monthly data return for any longer period query.
 
